@@ -22,7 +22,7 @@ int print(char s)
 
 int _printf(const char *format, ...)
 {
-	char p = '%', s, *str, f;
+	char p = '%', s, *str;
 	int sum = 0, i = 0, j;
 	va_list args;
 
