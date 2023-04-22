@@ -2,6 +2,7 @@
 #include <stdarg.h>
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -33,7 +34,6 @@ int pr_chr(va_list args)
  */
 int pr_string(va_list args)
 {
-	char *str = va_arg(args, char *);
 	int sum = 0, j;
 	char s;
 
@@ -52,13 +52,11 @@ int pr_string(va_list args)
  */
 int _printf(const char *format, ...)
 {
-	char p = '%', s;
 	int sum = 0, i = 0;
+	char *str;
 	va_list args;
 
 	va_start(args, format);
-	if ((int)strlen(format) == 0)
-		return (0);
 	while (format[i] != '\0')
 	{
 		if (format[i] != '%')
@@ -67,23 +65,29 @@ int _printf(const char *format, ...)
 			i++;
 			continue;
 		}
+		if (format[i + 1] == '%')
+		{
+			sum += print('%);
+		}
+		else if (format[i + 1] == 'c')
+		{
+			sum += pr_chr(args);
+		}
+		else if (format[i + 1] == 's')
+		{
+			str = va_arg(args, char *);
+			if (str != NULL)
+				sum += pr_string(str);
+			else
+				sum += pr_string("(null)");
+		}
 		else
 		{
-			if (format[i + 1] == '%')
-			{
-				s = p;
-				sum += print(s);
-			}
-			else if (format[i + 1] == 'c')
-			{
-				sum += pr_chr(args);
-			}
-			else if (format[i + 1] == 's')
-			{
-				sum += (pr_string(args));
-			}
-			i += 2;
+			sum += print(format[i]);
+			sum += print(format[i + 1]);
 		}
+
+		i += 2;
 	}
 	va_end(args);
 	return (sum);
