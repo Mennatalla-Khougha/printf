@@ -32,7 +32,7 @@ int pr_chr(va_list args)
   * @args: string to be printed..
   * Return: number of chars printed.
  */
-int pr_string(va_list args)
+int pr_string(char *str)
 {
 	int sum = 0, j;
 	char s;
