@@ -67,7 +67,7 @@ int _printf(const char *format, ...)
 		}
 		if (format[i + 1] == '%')
 		{
-			sum += print('%);
+			sum += print('%');
 		}
 		else if (format[i + 1] == 'c')
 		{
