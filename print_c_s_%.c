@@ -29,7 +29,7 @@ int pr_chr(va_list args)
 
 /**
   * pr_string - print formatted string.
-  * @args: string to be printed..
+  * @str: string to be printed..
   * Return: number of chars printed.
  */
 int pr_string(char *str)
