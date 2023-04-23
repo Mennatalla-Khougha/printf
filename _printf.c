@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 		if (format[i + 1] == '\0')
 			return (-1);
 		else if (strchr(list, format[i + 1]) != 0)
-				sum += print_spec(format[i + 1], args);
+			sum += print_spec(format[i + 1], args);
 		else
 		{
 			sum += print(format[i]);
