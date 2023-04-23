@@ -19,8 +19,9 @@ int check_input(const char *format)
 * Return: number of chars printed.
 */
 int _printf(const char *format, ...)
+
 {
-	char *list = "scdi%";
+	char *list = "scdib%";
 	int sum = 0, i = 0;
 	va_list args;
 
@@ -77,5 +78,7 @@ int print_spec(char format, va_list args)
 		sum += pr_decimal(args);
 	else if (format == 'i')
 		sum += pr_integer(args);
+	else if (format == 'b')
+		sum += pr_binary(args);
 	return (sum);
 }

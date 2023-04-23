@@ -15,7 +15,8 @@ int print_spec(char format, va_list args);
 int print_number(int x, int sum);
 int pr_decimal(va_list args);
 int pr_integer(va_list args);
-
+int pr_binary(va_list args);
+int print_b(int n, int sum);
 
 /**
 * struct op - Struct op
