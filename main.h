@@ -10,6 +10,7 @@ int pr_chr(va_list args);
 int pr_string(char *str);
 int pr_percent(void);
 int print(char s);
+int check_input(char *format);
 /**
 * struct op - Struct op
 *
