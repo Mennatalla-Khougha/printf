@@ -50,7 +50,9 @@ int _printf(const char *format, ...)
 				sum += pr_string("(null)");
 		}
 		else if (format[i + 1] == '\0')
+		{
 			return (-1);
+		}
 		else
 		{
 			sum += print(format[i]);
