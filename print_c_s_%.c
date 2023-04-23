@@ -38,4 +38,5 @@ int pr_string(char *str)
 		sum += print(s);
 	}
 	return (sum);
+}
 
