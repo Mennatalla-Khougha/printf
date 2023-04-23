@@ -14,6 +14,8 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	while (format[i] != '\0')
 	{
+		if (format == NULL)
+			exit (-1);
 		if (format[i] != '%')
 		{
 			sum += print(format[i]);
