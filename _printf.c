@@ -6,7 +6,7 @@
  * Return: 0;
  */
 
-int check_input(char *format)
+int check_input(const char *format)
 {
 	if (format == NULL)
 		exit(-1);
@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	va_start(args, format);
-	if (check_input)
+	if (check_input(format))
 		return (0);
 	while (format[i] != '\0')
 	{
