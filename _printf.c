@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	while (format[i] != '\0')
 	{
 		if (format == NULL)
-			exit (-1);
+			exit(-1);
 		if (format[i] != '%')
 		{
 			sum += print(format[i]);
@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 			if (str != NULL)
 				sum += pr_string(str);
 			else
-				sum += pr_string("(null)");
+				sum += pr_string("nil");
 		}
 		else
 		{
