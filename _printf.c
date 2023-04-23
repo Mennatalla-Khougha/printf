@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 	char *str;
 	va_list args;
 
-	va_start(args, format);
+	(va_start(args, format);
 	if (check_input(format))
 		return (0);
 	while (format[i] != '\0')
@@ -51,7 +51,7 @@ int _printf(const char *format, ...)
 			if (str != NULL)
 				sum += pr_string(str);
 			else
-				sum += pr_string("nil");
+				sum += pr_string("(nil)");
 		}
 		else
 		{
