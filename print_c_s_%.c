@@ -1,8 +1,3 @@
-#include <unistd.h>
-#include <stdarg.h>
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -43,4 +38,4 @@ int pr_string(char *str)
 		sum += print(s);
 	}
 	return (sum);
-}
+
