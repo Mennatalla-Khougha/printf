@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		exit(-1)
 	while (format[i] != '\0')
-	{:wq
+	{
 		if (format[i] != '%')
 		{
 			sum += print(format[i]);
