@@ -12,10 +12,10 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	va_start(args, format);
+	if (format == NULL)
+		exit(-1)
 	while (format[i] != '\0')
-	{
-		if (format == NULL)
-			exit(-1);
+	{:wq
 		if (format[i] != '%')
 		{
 			sum += print(format[i]);
