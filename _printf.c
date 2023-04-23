@@ -43,8 +43,7 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i + 1] == 'c')
 		{
-			str = va_arg(arsg, char *);
-			sum += pr_chr(str[0]);
+			sum += pr_chr(args);
 		}
 		else if (format[i + 1] == 's')
 		{
