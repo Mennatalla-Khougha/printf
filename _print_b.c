@@ -23,8 +23,6 @@ int print_b(int n, int sum)
 {
 	unsigned int x = n;
 
-	if (x < 0)
-		exit(-1);
 	x /= 2;
 
 	if (x != 0)
