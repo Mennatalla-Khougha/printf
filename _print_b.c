@@ -9,7 +9,7 @@ int pr_binary(va_list args)
 {
 	int sum = 0;
 
-	int b = va_arg(args, int);
+	unsigned int b = va_arg(args, int);
 
 	return (print_b(b, sum));
 }
@@ -21,7 +21,7 @@ int pr_binary(va_list args)
  */
 int print_b(int n, int sum)
 {
-	int x = n;
+	unsigned int x = n;
 
 	if (x < 0)
 		exit(-1);
