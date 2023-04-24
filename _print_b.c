@@ -19,7 +19,7 @@ int pr_binary(va_list args)
  * @sum: 0
  * Return: number of char printed
  */
-int print_b(int n, int sum)
+int print_b(unsigned int n, int sum)
 {
 	unsigned int x = n;
 
