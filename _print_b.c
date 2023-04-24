@@ -9,7 +9,7 @@ int pr_binary(va_list args)
 {
 	int sum = 0;
 
-	unsigned int b = va_arg(args, int);
+	unsigned int b = va_arg(args, unsigned int);
 
 	return (print_b(b, sum));
 }
