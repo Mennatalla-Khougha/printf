@@ -1,6 +1,20 @@
 #include "main.h"
 
 /**
+ * pr_binary - prints a binary number from int
+ * @args: number to be converted
+ * Return: number of char printed
+ */
+int pr_binary(va_list args)
+{
+	int sum = 0;
+
+	unsigned int b = va_arg(args, unsigned int);
+
+	return (print_b(b, sum));
+}
+
+/**
  * print_b - convert int to binary or octal
  * @n: number to be converted
  * @sum: 0.
@@ -29,5 +43,5 @@ int pr_octal(va_list args)
 	int sum = 0;
 	unsigned int o = va_arg(args, unsigned int);
 
-	return(print_b(o, sum, 8));
+	return (print_b(o, sum, 8));
 }
