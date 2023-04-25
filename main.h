@@ -21,6 +21,7 @@ int pr_unsign(va_list args);
 int print_num(unsigned int u, int sum);
 int pr_hexa(va_list args, int n);
 int print_h(unsigned int num, int sum, int chr);
+int pr_octal(va_list args);
 
 /**
 * struct op - Struct op
