@@ -14,7 +14,7 @@ int pr_str(va_list args)
 
 /**
  * print_str  - print the hexa number of unprintable chars.
- * Str: string to be printed.
+ * @str: string to be printed.
  * Return: number of chars printed.
  */
 int print_str(char *str)
@@ -22,7 +22,7 @@ int print_str(char *str)
 	int i, sum = 0, len;
 
 	len = (int)strlen(str);
-	for (i= 0; i < len; i++)
+	for (i = 0; i < len; i++)
 	{
 		if (str[i] < 32 || str[i] >= 127)
 		{
