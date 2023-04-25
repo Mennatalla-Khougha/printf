@@ -19,6 +19,8 @@ int pr_binary(va_list args);
 int print_b(unsigned int n, int sum, int base);
 int pr_unsign(va_list args);
 int print_num(unsigned int u, int sum);
+int pr_hexa(va_list args, int n);
+int print_h(unsigned int num, int sum, int chr);
 
 /**
 * struct op - Struct op

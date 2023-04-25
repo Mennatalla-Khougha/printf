@@ -21,7 +21,7 @@ int check_input(const char *format)
 int _printf(const char *format, ...)
 
 {
-	char *list = "scdibuo%";
+	char *list = "scdibuoxX%";
 	int sum = 0, i = 0;
 	va_list args;
 
@@ -82,5 +82,9 @@ int print_spec(char format, va_list args)
 		sum += pr_binary(args);
 	else if (format == 'u')
 		sum += pr_unsign(args);
+	else if (format == 'x')
+		sum += pr_hexa(args, 87);
+	else if (format == 'X')
+		sum += pr_hexa(args, 55);
 	return (sum);
 }
