@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * pr_unsigned - print unsigned number
+ * pr_unsign - print unsigned number
  * @args: number to be printed
  * Return: number of digits printed
  */
