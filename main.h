@@ -17,7 +17,7 @@ int pr_decimal(va_list args);
 int pr_integer(va_list args);
 int pr_binary(va_list args);
 int print_b(unsigned int n, int sum);
-int pr_unsigned(va_list args);
+int pr_unsign(va_list args);
 int print_num(unsigned int u, int sum);
 
 /**

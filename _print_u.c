@@ -5,7 +5,7 @@
  * @args: number to be printed
  * Return: number of digits printed
  */
-int pr_unsigned(va_list args)
+int pr_unsign(va_list args)
 {
 	int sum = 0;
 	unsigned int u = va_arg(args, unsigned int);
