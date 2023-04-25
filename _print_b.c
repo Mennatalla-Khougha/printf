@@ -34,7 +34,7 @@ int print_b(unsigned int n, int sum, int base)
 }
 
 /**
- * print_octal - convert int into octal
+ * pr_octal - convert int into octal
  * @args: numbers to be converted
  * Return: number of digist printed.
  */
