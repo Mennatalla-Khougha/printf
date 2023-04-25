@@ -26,6 +26,6 @@ int print_num(unsigned int u, int sum)
 	x /= 10;
 	if (x != 0)
 		sum = print_num(x, sum);
-	sum += print_num('0' + u % 10);
+	sum += print('0' + u % 10);
 	return (sum);
 }
