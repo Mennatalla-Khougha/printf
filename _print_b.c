@@ -11,7 +11,7 @@ int pr_binary(va_list args)
 
 	unsigned int b = va_arg(args, unsigned int);
 
-	return (print_b(b, sum));
+	return (print_b(b, sum, 2));
 }
 
 /**
