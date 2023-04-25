@@ -26,7 +26,7 @@ int print_str(char *str)
 	{
 		if (str[i] < 32 || str[i] >= 127)
 		{
-			sum += print('\\')
+			sum += print('\\');
 			sum += print('x');
 			if (str[i] < 16)
 				sum += print('0');
