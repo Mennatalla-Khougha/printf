@@ -21,7 +21,7 @@ int check_input(const char *format)
 int _printf(const char *format, ...)
 
 {
-	char *list = "scdibuoxX%";
+	char *list = "scdibuoxXS%";
 	int sum = 0, i = 0;
 	va_list args;
 
