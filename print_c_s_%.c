@@ -31,8 +31,9 @@ int pr_string(char *str)
 {
 	int sum = 0, j;
 	char s;
+	int len = (int)strlen(str);
 
-	for (j = 0; j < (int)strlen(str); j++)
+	for (j = 0; j < len; j++)
 	{
 		s = str[j];
 		sum += print(s);
