@@ -86,5 +86,7 @@ int print_spec(char format, va_list args)
 		sum += pr_hexa(args, 87);
 	else if (format == 'X')
 		sum += pr_hexa(args, 55);
+	else if (format == 'o')
+		sum += pr_octal(args);
 	return (sum);
 }
