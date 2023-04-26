@@ -7,7 +7,7 @@
 */
 int print(char s)
 {
-        return (write(1, &s, 1));
+	return (write(1, &s, 1));
 }
 
 /**
@@ -17,9 +17,9 @@ int print(char s)
  */
 int pr_chr(va_list args)
 {
-        char s = va_arg(args, int);
+	char s = va_arg(args, int);
 
-        return (print(s));
+	return (print(s));
 }
 
 /**
@@ -29,13 +29,13 @@ int pr_chr(va_list args)
  */
 int pr_string(char *str)
 {
-        int sum = 0;
+	int sum = 0;
 
 	sum += print_buffer(str);
-        return (sum);
+	return (sum);
 }
 /**
- * print_buffer - create a buffer 
+ * print_buffer - create a buffer
  * @str: string to be stored.
  * Return: number of chars printed
  */
@@ -50,6 +50,6 @@ int print_buffer(char *str)
 		if (i <= 1024)
 			buffer[i] = str[i];
 	}
-	sum += write(1, buffer, i);
+	sum += write(1, buffer, len);
 	return (sum);
 }
