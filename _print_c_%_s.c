@@ -29,9 +29,15 @@ int pr_chr(va_list args)
  */
 int pr_string(char *str)
 {
-	int sum = 0;
+	int sum = 0, j;
+	char s;
+	int len = (int)strlen(str);
 
-	sum += print_buffer(str);
+	for (j = 0; j < len; j++)
+	{
+		s = str[j];
+		sum += print(s);
+	}
 	return (sum);
 }
 /**
