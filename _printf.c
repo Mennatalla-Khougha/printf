@@ -21,7 +21,8 @@ int check_input(const char *format)
 int _printf(const char *format, ...)
 
 {
-	char *list = "scdibuoxXS%";
+	char *list = "scdibuoxXSprR%";
+	char *flag = "+ ";
 	int sum = 0, i = 0;
 	va_list args;
 
@@ -38,8 +39,12 @@ int _printf(const char *format, ...)
 		}
 		if (format[i + 1] == '\0')
 			return (-1);
+		else if (format[i + 1] == '#')
+			sum += pr_format(format[i + 2]);
 		else if (strchr(list, format[i + 1]) != 0)
 			sum += print_spec(format[i + 1], args);
+		else if (strchr(flag, format[i + 1]) != 0)
+			sum += pr_flag(format[i + 1], args);
 		else
 		{
 			sum += print(format[i]);
@@ -90,5 +95,11 @@ int print_spec(char format, va_list args)
 		sum += pr_octal(args);
 	else if (format == 'S')
 		sum += pr_str(args);
+	else if (format == 'p')
+		sum += pr_pointer(args);
+	else if (format == 'r')
+		sum += pr_rev(args);
+	else if (format == 'R')
+		sum += pr_rot(args);
 	return (sum);
 }

@@ -24,17 +24,15 @@ int print_h(unsigned int num, int sum, int chr);
 int pr_octal(va_list args);
 int pr_str(va_list args);
 int print_str(char *str);
-
-/**
-* struct op - Struct op
-*
-* @op: The operator
-* @f: The function associated
-*/
-typedef struct ch
-{
-char ch;
-int (*ptr)(va_list args);
-} ch_t;
+int pr_pointer(va_list args);
+int print_p(unsigned long p, int sum);
+int pr_rev(va_list args);
+int pr_rot(va_list args);
+int print_rot(char *str);
+int pr_flag(char flag, va_list args);
+int pr_sign(va_list args);
+int pr_space(va_list args);
+int pr_format(char f);
+int print_buffer(char *str);
 int _printf(const char *format, ...);
 #endif

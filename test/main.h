@@ -15,7 +15,15 @@ int print_spec(char format, va_list args);
 int print_number(int x, int sum);
 int pr_decimal(va_list args);
 int pr_integer(va_list args);
-
+int pr_binary(va_list args);
+int print_b(unsigned int n, int sum, int base);
+int pr_unsign(va_list args);
+int print_num(unsigned int u, int sum);
+int pr_hexa(va_list args, int n);
+int print_h(unsigned int num, int sum, int chr);
+int pr_octal(va_list args);
+int pr_str(va_list args);
+int print_str(char *str);
 
 /**
 * struct op - Struct op
